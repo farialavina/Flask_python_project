@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Homepage</title>
+
+	<meta name="author" content="your name" />
+	<meta name="description" content="" />
+
+	<link href="../static/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../static/slideshow.css"/>
+
+
+</head>
+<body>
+
+
+	<div id="page" >
+		<div id="logo">
+			<h1><a href="/index" id="logoLink">logo</a></h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="/home.html">Home</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/event.html">Create Events</a></li>
+                <li><a href="/event.html">Book Tickets</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+			</ul>
+		</div>
+
+	<div class ="slideshow-container">
+        <div class="mySlides fade">
+            <img src="../static/images/slide-1.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+        <img src="../static/images/slide-2.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+        </div>
+
+        <div style="text-align:center">
+        <span class="dot"></span>
+         <span class="dot"></span>
+        <span class="dot"></span>
+        </div>
+	</div>
+
+		<div id="footer">
+			<p>
+				Copyright 2017 Our Project
+			</p>
+		</div>
+	        <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+    </div>
+
+</body>
+</html>
